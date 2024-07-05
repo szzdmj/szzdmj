@@ -45,7 +45,6 @@ jobs:
 
     - name: Commit and push if changed   # 将README.md更新到仓库
       run: |
-          gh issue comment $ISSUE --body "Thank you for opening this issue!"
           git diff 
           git config --global user.email "x@1x1.io"
           git config --global user.name "1x1"
@@ -54,4 +53,3 @@ jobs:
           git push -f
           env:
             GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            ISSUE: ${{ github.event.issue.html_url }}
