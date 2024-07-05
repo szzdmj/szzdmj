@@ -9,19 +9,27 @@ on:   # 触发时机
   schedule:
     - cron:  '5 * * * *'  # 每5分钟运行一次
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+permissions:
+      pull-requests: write
+      issues: write
+      repository-projects: write
+      contents: write
+      pages: write
+      id-token: write
+concurrency:
+      group: "pages"
+      cancel-in-progress: false
+  
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest   # 使用最新版ubuntu镜像 
-    permissions:
-      pull-requests: write
-      issues: write
-      repository-projects: write
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps: 
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v4  
+    - name: checkout
+      uses: actions/checkout@v4  
       
     - name: Setup Python  # 安装python环境 
       uses: actions/setup-python@v2
