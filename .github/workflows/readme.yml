@@ -40,3 +40,5 @@ jobs:
         git add -A
         git commit -m "Updated Readme" || exit 
         git push -f 
+        with:
+            github_token: ${{ secrets.DEPENDABOT_TOKEN }}
