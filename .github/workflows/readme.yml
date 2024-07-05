@@ -37,7 +37,6 @@ jobs:
 
     - name: Commit and push if changed   # 将README.md更新到仓库
       uses: ad-m/github-push-action@master
-      with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-      
+      env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
