@@ -45,8 +45,7 @@ jobs:
 
     - name: Commit and push if changed   # 将README.md更新到仓库
       run: |
-          gh issue --repo ${{ github.repository }} \
-          create --title "Issue title" --body "Issue body"
+          gh issue comment $ISSUE --body "Thank you for opening this issue!"
           git diff 
           git config --global user.email "x@1x1.io"
           git config --global user.name "1x1"
@@ -54,4 +53,5 @@ jobs:
           git commit -m "Updated Readme" || exit 
           git push -f
           env:
-           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ISSUE: ${{ github.event.issue.html_url }}
