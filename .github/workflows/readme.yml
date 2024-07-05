@@ -53,3 +53,5 @@ jobs:
           git add -A
           git commit -m "Updated Readme" || exit 
           git push -f
+          env:
+           GH_TOKEN: ${{ github.token }}
