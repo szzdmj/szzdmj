@@ -26,7 +26,8 @@
 
 ### 专栏  
 - [SZMJ WEB](https://github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
-  
+- [list2.txt](https://szzdmj.github.io/github-page-test/list2.txt)
+- [dtw](https://j.mp/ddw2288)
 - ……
 
 	
