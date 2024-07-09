@@ -1,4 +1,4 @@
-  
+  <script src="https://gist.github.com/username/gist-id.js"></script>
 <p align="center">
   <img src="https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg"/>
 </p>	
