@@ -33,10 +33,3 @@
 	
 </td>
 </tr></table>
- <style>
-     h1 {
-         color: blue;
-     }
- </style>
-
- <h1>This is a blue heading</h1>
