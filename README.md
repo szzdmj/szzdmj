@@ -33,3 +33,10 @@
 	
 </td>
 </tr></table>
+ <script>
+     function sayHello() {
+         alert('Hello from JavaScript');
+     }
+ </script>
+
+ <button οnclick="sayHello()">Click me</button>
