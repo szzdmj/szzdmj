@@ -1,4 +1,4 @@
-  
+  <script src="https://gist.github.com/rixingyike/3e64127a5ebb66ee381093bfeeed8829.js"></script>
 <p align="center">
   <img src="https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg"/>
 </p>	
