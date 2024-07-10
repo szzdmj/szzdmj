@@ -1,4 +1,6 @@
-  
+  <div align="center">
+    <img src="example.svg" width="40" height="400" alt="css-in-readme">
+</div>
 <p align="center">
   <img src="https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg"/>
 </p>	
