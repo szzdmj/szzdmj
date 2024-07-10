@@ -45,6 +45,7 @@ jobs:
 
     - name: Commit and push if changed   # 将README.md更新到仓库
       run: |
+          echo "PUBLISH_DIR:{$PUBLISH_DIR}"
           echo "Home: ${HOME}"
           echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
           echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
