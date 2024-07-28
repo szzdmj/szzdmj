@@ -4,21 +4,17 @@ import html
 import re
 
 # blogUrl = 'szmj0.github.io'
-blogUrl = 'http://www.shenzhouzhengdao.org/'
+blogUrl = 'www.shenzhouzhengdao.org'
 
 headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'} 
 
 def addIntro(f):
 	txt = '''  
-<p align="center">
-  <img src="github.com/szmj0/update/blob/main/extras/Icon-256.jpg"/>
-</p>	
-<p align="center">
-  <img src="github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg"/>
-</p>
-
-<p align="center">test</p>  
-
+![N|Solid](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
+# 神州明见畅游真相精简阅读版 	
+---
+简介文字
+![N|Solid](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
 
 ''' 
 	f.write(txt)
@@ -27,7 +23,6 @@ def addProjectInfo(f):
 	txt ='''
 ### 开源项目  
 - [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9	
-   
 [查看更多](github.com/szmj0/Publish)	 
 
 	''' 
@@ -48,7 +43,7 @@ def addZhuanlanInfo(f):
 	with open(list2_filename, "r+") as l:
 		data = l.read()
 	list2_text = '''
-**list2.txt:**"      
+**list2.txt:**      
 ---
 {data}
 ---
@@ -68,13 +63,13 @@ if __name__=='__main__':
 	f = open('README.md', 'w+')
 	addIntro(f)
 	f.write('<table align="center"><tr>\n')
-	f.write('<td valign="top" width="33%">\n')
+	f.write('<td valign="top" width="33%" style="word-wrap: break-word;">\n')
 	addProjectInfo(f)
 	f.write('\n</td>\n')
-	f.write('<td valign="top" width="33%">\n')
+	# f.write('<td valign="top" width="33%">\n')
 	# addBlogInfo(f)
-	f.write('\n</td>\n')
-	f.write('<td valign="top" width="33%">\n')
+	# f.write('\n</td>\n')
+	f.write('<td valign="top" width="33%" style="word-wrap: break-word;">\n')
 	addZhuanlanInfo(f)
 	f.write('\n</td>\n')
 	f.write('</tr></table>\n')
