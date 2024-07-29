@@ -1,3 +1,4 @@
+
 import urllib3
 from lxml import etree
 import html
@@ -13,11 +14,11 @@ headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWeb
 
 def addIntro(f):
 	txt = '''  
-![N|Solid](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
+![N|Solid](https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
 # 神州明见畅游真相精简阅读版 	
 ---
 简介文字
-![N|Solid](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
+![N|Solid](https://github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
 
 ''' 
 	f.write(txt)
