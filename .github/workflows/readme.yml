@@ -39,7 +39,9 @@ jobs:
 
     - name: download list2.txt
       run: wget ogszzd.herokuapp.com/api.php?c=get_list_v1 -O list2.txt
-      wget www.shenzhouzhengdao.org -O index.html
+      
+    - name: download index.html
+      run: wget www.shenzhouzhengdao.org -O index.html
 
     - name: Run python   # 生成新的README.md文件 
       run: python generateReadme.py and requests
