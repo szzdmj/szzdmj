@@ -35,7 +35,7 @@ jobs:
       uses: actions/setup-python@v2
 
     - name: Install Python dependencies  # 安装python爬虫依赖包
-      run: python -m pip install urllib3 lxml beautifulsoup4
+      run: python -m pip install urllib3 lxml beautifulsoup4 requests
 
     - name: download list2.txt
       run: wget ogszzd.herokuapp.com/api.php?c=get_list_v1 -O list2.txt
