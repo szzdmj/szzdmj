@@ -1,10 +1,10 @@
-
 import urllib3
 from lxml import etree
 import html
 import re
 from bs4 import BeautifulSoup
 import requests
+import html2text
 
 
 # blogUrl = 'szmj0.github.io'
@@ -50,9 +50,6 @@ def addZhuanlanInfo(f):
 **list2.txt:**      
 ---
 {data}
----
-
-
 '''.format(data=data)	
 
 	f.write(txt) 
@@ -66,8 +63,12 @@ def addBlogInfo(f):
 	html_data = resp_tree.xpath(".//article[@class='blog-list-box']")
 
 def addHTMLInfo(f):
-	f.write('# 精选文章')
-	with open('index.html', 'r', encoding='utf-8') as file:
+	txt ='''
+# 精选文章  	 
+
+	''' 
+	f.write(txt)
+	with open('1.html', 'r+', encoding='gbk') as file:
     		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	articles = soup.find_all('pre')
@@ -82,6 +83,64 @@ def addHTMLInfo(f):
 		'''.format(title=title, body=body)
 		f.write(txt)
 	# print(articles_dict)
+
+def addHTMLVideos(f):
+	txt ='''
+# 本站视频	 
+
+	''' 
+	f.write(txt)
+	with open('index.html', 'r+', encoding='gbk') as file:
+    		html_content = file.read()
+	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
+	video_table = soup.find('table', id='tbPlayList')
+
+	# Check if table is found
+	if video_table:
+		# Find all td elements within the table
+		td_elements = video_table.find_all('td')
+
+		# Loop through td elements and print their content
+		for td in td_elements:
+			print(td.text)
+	else:
+		print("Table not found")
+
+# 		txt = '''
+# ### {title}
+# {body}
+# ---
+# 		'''.format(title=title, body=body)
+# 		f.write(txt)
+# 	# print(articles_dict)
+
+def addHTMLBooks(f):
+	txt ='''
+# 精彩电子书下载
+
+'''
+	f.write(txt)
+	with open('1.html', 'r+', encoding='gbk') as file:
+    		html_content = file.read()
+	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
+	# print(soup.prittify())
+	books_table1 = soup.find('div', id='bookpage1')
+	books_table2 = soup.find('div', id='bookpage2')
+	html_parser = html2text.HTML2Text()
+	pageMD = html_parser.handle(books_table1.prettify()) + html_parser.handle(books_table2.prettify())
+	f.write(pageMD)
+
+def addHTMLDownloads(f):
+	with open('1.html', 'r+', encoding='gbk') as file:
+		html_content = file.read()
+	soup = BeautifulSoup(html_content, 'html.parser')
+	page = soup.find('div', id='d5')
+	html_parser = html2text.HTML2Text()
+	# print(page.prettify())
+	pageMD = html_parser.handle(page.prettify())
+	f.write(page.prettify())
+
+
 
 if __name__=='__main__':
 	f = open('README.md', 'w+')
@@ -98,4 +157,7 @@ if __name__=='__main__':
 	#f.write('\n</td>\n')
 	#f.write('</tr></table>\n')
 	addHTMLInfo(f)
+	# addHTMLVideos(f)
+	addHTMLBooks(f)
+	addHTMLDownloads(f)
 	f.close 
