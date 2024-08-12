@@ -68,7 +68,7 @@ def addHTMLInfo(f):
 
 	''' 
 	f.write(txt)
-	with open('index.html', 'r+', encoding='gbk') as file:
+	with open('index.html', 'r+', encoding='utf-8') as file:
     		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	articles = soup.find_all('pre')
