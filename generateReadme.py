@@ -90,7 +90,7 @@ def addHTMLVideos(f):
 
 	''' 
 	f.write(txt)
-	with open('index.html', 'r+', encoding='gbk') as file:
+	with open('index.html', 'r+', encoding='utf-8') as file:
     		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	video_table = soup.find('table', id='tbPlayList')
@@ -120,7 +120,7 @@ def addHTMLBooks(f):
 
 '''
 	f.write(txt)
-	with open('index.html', 'r+', encoding='gbk') as file:
+	with open('index.html', 'r+', encoding='utf-8') as file:
     		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	# print(soup.prittify())
@@ -131,7 +131,7 @@ def addHTMLBooks(f):
 	f.write(pageMD)
 
 def addHTMLDownloads(f):
-	with open('index.html', 'r+', encoding='gbk') as file:
+	with open('index.html', 'r+', encoding='utf-8') as file:
 		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')
 	page = soup.find('div', id='d5')
