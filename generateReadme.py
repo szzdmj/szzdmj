@@ -134,12 +134,14 @@ def addHTMLDownloads(f):
 	with open('index.html', 'r+', encoding='utf-8') as file:
 		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')
+	# 移除所有script tag
+	for script in soup.find_all('script'):
+		script.decompose() 
 	page = soup.find('div', id='d5')
 	html_parser = html2text.HTML2Text()
 	# print(page.prettify())
 	pageMD = html_parser.handle(page.prettify())
 	f.write(page.prettify())
-
 
 
 if __name__=='__main__':
