@@ -23,38 +23,6 @@ def addIntro(f):
 ''' 
 	f.write(txt)
 
-def addProjectInfo(f):
-	txt ='''
-# 开源项目  
-- [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9	
-[查看更多](github.com/szmj0/Publish)	 
-
-	''' 
-	f.write(txt) 
-
-def addZhuanlanInfo(f):
-	txt ='''
-# 专栏  
-- [SZMJ WEB](github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
-- [list2.txt](szzdmj.github.io/github-page-test/list2.txt)
-- [dtw](j.mp/ddw2288)
-- ……
-
-	''' 
-
-# add list2.txt
-	list2_filename = 'list2.txt'	
-	with open(list2_filename, "r+") as l:
-		data = l.read()
-	list2_text = '''
-**list2.txt:**      
----
-{data}
-'''.format(data=data)	
-
-	f.write(txt) 
-	f.write(list2_text)
-
 def addBlogInfo(f):  
 	http = urllib3.PoolManager(num_pools=5, headers = headers)
 	resp = http.request('GET', blogUrl)
@@ -129,6 +97,38 @@ def addHTMLBooks(f):
 	html_parser = html2text.HTML2Text()
 	pageMD = html_parser.handle(books_table1.prettify()) + html_parser.handle(books_table2.prettify())
 	f.write(pageMD)
+	
+def addProjectInfo(f):
+	txt ='''
+# 开源项目  
+- [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9	
+[查看更多](github.com/szmj0/Publish)	 
+
+	''' 
+	f.write(txt) 
+
+def addZhuanlanInfo(f):
+	txt ='''
+# 专栏  
+- [SZMJ WEB](github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
+- [list2.txt](szzdmj.github.io/github-page-test/list2.txt)
+- [dtw](j.mp/ddw2288)
+- ……
+
+	''' 
+
+# add list2.txt
+	list2_filename = 'list2.txt'	
+	with open(list2_filename, "r+") as l:
+		data = l.read()
+	list2_text = '''
+**list2.txt:**      
+---
+{data}
+'''.format(data=data)	
+
+	f.write(txt) 
+	f.write(list2_text)
 
 def addHTMLDownloads(f):
 	with open('index.html', 'r+', encoding='utf-8') as file:
