@@ -918,9 +918,6 @@ IED的声明说：『中国政府企图以诬陷法轮功残害生命破坏家�
 多种格式下载：  html  pdf  chm  epub  txt
 
 <div align="center" id="d5" style="max-wdith:1200px;padding-top:70px;">
- <script>
-  d5.style.display="none";
- </script>
  <h2>
   自2004年12月3日起
  </h2>
