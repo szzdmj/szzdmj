@@ -87,11 +87,11 @@ def html_to_markdown_with_images(html, image_dir, pre_index):
 
 def addIntro(f):
 	txt = '''  
-![Image](github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
+![Image](https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
 # 神州明见畅游真相精简阅读版 	
 ---
 简介文字
-![Image](github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
+![Image](https://github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
 
 ''' 
 	f.write(txt)
@@ -99,9 +99,9 @@ def addIntro(f):
 def addProjectInfo(f):
 	txt ='''
 # 翻墙项目  
-- [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9
-- [SZMJ WEB](github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
-[查看更多](github.com/szmj0/Publish)	 
+- [app](https://github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9
+- [SZMJ WEB](https://github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
+[查看更多](https://github.com/szmj0/Publish)	 
 
 	''' 
 	f.write(txt) 
@@ -110,7 +110,7 @@ def addZhuanlanInfo(f):
 	txt ='''
 # 专栏  
 - [动态网](https://j.mp/ddw2288)
-- [list2.txt](szzdmj.github.io/github-page-test/list2.txt)
+- 
 
 - ……
 
