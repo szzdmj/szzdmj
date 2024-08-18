@@ -10,6 +10,10 @@ from bs4 import BeautifulSoup
 import requests
 import html2text
 
+
+
+
+
 # blogUrl = 'szmj0.github.io'
 blogUrl = 'www.shenzhouzhengdao.org'
 image_directory = 'images'
@@ -87,11 +91,11 @@ def html_to_markdown_with_images(html, image_dir, pre_index):
 
 def addIntro(f):
 	txt = '''  
-![Image](https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
+![Image](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
 # 神州明见畅游真相精简阅读版 	
 ---
 简介文字
-![Image](https://github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
+![Image](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
 
 ''' 
 	f.write(txt)
@@ -201,24 +205,22 @@ def addHTMLDownloads(f):
 	pageMD = html_parser.handle(page.prettify())
 	f.write(pageMD)
 
-
-
 if __name__=='__main__':
 	f = open('README.md', 'w+')
 	addIntro(f)
 	#f.write('<table align="center"><tr>\n')
 	#f.write('<td valign="top" width="33%" style="word-wrap: break-word;">\n')
-	addProjectInfo(f)
 	#f.write('\n</td>\n')
 	# f.write('<td valign="top" width="33%">\n')
 	# addBlogInfo(f)
 	# f.write('\n</td>\n')
 	#f.write('<td valign="top" width="33%" style="word-wrap: break-word;">\n')
-	addZhuanlanInfo(f)
 	#f.write('\n</td>\n')
 	#f.write('</tr></table>\n')
 	addHTMLInfo(f)
 	# addHTMLVideos(f)
 	addHTMLBooks(f)
 	addHTMLDownloads(f)
+	addProjectInfo(f)
+	addZhuanlanInfo(f)
 	f.close 
