@@ -10,10 +10,6 @@ from bs4 import BeautifulSoup
 import requests
 import html2text
 
-
-
-
-
 # blogUrl = 'szmj0.github.io'
 blogUrl = 'www.shenzhouzhengdao.org'
 image_directory = 'images'
@@ -91,19 +87,20 @@ def html_to_markdown_with_images(html, image_dir, pre_index):
 
 def addIntro(f):
 	txt = '''  
-![Image](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
+![Image](github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
 # 神州明见畅游真相精简阅读版 	
 ---
 简介文字
-![Image](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
+![Image](github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
 
 ''' 
 	f.write(txt)
 
 def addProjectInfo(f):
 	txt ='''
-# 开源项目  
-- [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9	
+# 翻墙项目  
+- [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9
+- [SZMJ WEB](github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
 [查看更多](github.com/szmj0/Publish)	 
 
 	''' 
@@ -112,9 +109,9 @@ def addProjectInfo(f):
 def addZhuanlanInfo(f):
 	txt ='''
 # 专栏  
-- [SZMJ WEB](github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
+- [动态网](https://j.mp/ddw2288)
 - [list2.txt](szzdmj.github.io/github-page-test/list2.txt)
-- [dtw](j.mp/ddw2288)
+
 - ……
 
 	''' 
