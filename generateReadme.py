@@ -221,3 +221,7 @@ if __name__=='__main__':
 	addProjectInfo(f)
 	addZhuanlanInfo(f)
 	f.close 
+with open('README.md', "r+") as f:
+		encoded_text = html.escape(f.read())
+	with open('README.md', "w+") as f:
+		f.write(encoded_text)
