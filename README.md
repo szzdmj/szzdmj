@@ -1,6 +1,6 @@
   
 ![Image](https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
-# 神州明见畅游真相精简阅读版 	
+# 神州明见畅游真相精简阅读版
 ---
 简介文字
 ![Image](https://github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
@@ -2116,19 +2116,18 @@ IED的声明说：『中国政府企图以诬陷法轮功残害生命破坏家�
 点击进入“全球退党服务中心”官网
 
 
-# 翻墙项目  
-- [app](https://github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9
-- [SZMJ WEB](https://github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
-[查看更多](https://github.com/szmj0/Publish)	 
+# 开源项目  
+- [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9	
+[查看更多](github.com/szmj0/Publish)	 
 
 	
 # 专栏  
-- [动态网](https://j.mp/ddw2288)
-- 
-
+- [SZMJ WEB](github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
+- [list2.txt](szzdmj.github.io/github-page-test/list2.txt)
+- [dtw](j.mp/ddw2288)
 - ……
 
 	
 **list2.txt:**      
 ---
-NBlVwY0HwY3VwZhRwAfLmZk4lAl4PBlVwY1VGZfLQAl4vZ14FZ2RwY4RwZfxQAl4vZ14FZ2RwY4RwZfRwZhDGAhtwZl4FAlRQY3ZwYkDGZhDmZhDGZkjFAkVwY5NGZhRwAk4FZfDwAk4PAk4FZ2RwY4RGZfZGZl4FA24FZ2RwYkjvA54lAhRwAk4PBkRQY3LGZhpGZhRwAk4PBkRQYmDGZhxwYkLGZhtGZkjvZmVwYlRwYkZwZhRwAfZGAhHQZk4FBmVwY2ZQY3NwZhVmZl4PZ2RwYkjFZ34vZ5RwY1RGZhxGAfpGAk4PAm4FZ0RwYjVwZfVwZhDwZk4FBlVwY2ZQYlLGZhRGBhpQAhDGZkjFB5RwYlZGZhtwZl4FAlRQYlHGZhHmZl4vZm4PAkRQY4NGZhpwZhRwAk4PBkVQYlDwZhLGZk4FZ2RwY4RwZfDGZk4FZ0VwY0ZwY0RGZfZGZk4FZ0VwY0ZwY0RGZ60
+pwZl4PB34lA04PAkRQY2DwZhVGAhRwAk4PBkVQY5DwZhVGAhRwAk4PBkVQYkVwY0HwY4VwZhHwZkjlAm4FZ0RwY0ZwY0RGZfHGZl4FBjRwYkLGZhRQY0LGZhDGZhRwAk4PBkRQYjZwZhHQZk4FZ2RwYkjvA54lAhRwAk4PBkRQY3LGZhpGZhRwAk4PBkRQYmDGZhxwYkLGZhtGZkjlAhtQAhRmZl4FZ2jPZ34FBmRwYmpGZhRQY3NwZhVmZl4PZ2RwYkjPZlRwY3VwZhNwAk4FZfpGAk4PAm4FZ0RwYjVwZfLGZl4lA34FBlVwY2ZQYlLGZhRGBhpQAhDGZkjFB5RwYlZGZhtwZl4FAlRQYlHGZhHmZl4vZm4PAkRQY4NGZhpwZhRwAk4PBkVQYlDwZhLGZk4FZ2RwY4RwZfDGZk4FZ0VwY0ZwY0RGZ72
