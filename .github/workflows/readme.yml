@@ -1,3 +1,4 @@
+
 import base64
 import os
 from PIL import Image
@@ -14,6 +15,7 @@ import html2text
 blogUrl = 'www.shenzhouzhengdao.org'
 image_directory = 'images'
 
+headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'} 
 
 def save_base64_image(base64_str, image_dir, img_index, pre_index):
     # 提取图片数据
@@ -39,7 +41,7 @@ def html_to_markdown_with_images(html, image_dir, pre_index):
     h.ignore_links = False
     h.ignore_images = True
 
-    # 初始化BeautifulSouput
+    # 初始化BeautifulSoup
     soup = BeautifulSoup(html, 'lxml')
     markdown_lines = []
     
@@ -86,11 +88,11 @@ def html_to_markdown_with_images(html, image_dir, pre_index):
 
 def addIntro(f):
 	txt = '''  
-![Image](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
-# 神州明见畅游真相精简阅读版
+![Image](https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
+# 神州明见畅游真相精简阅读版 	
 ---
 简介文字
-![Image](管理员警告：禁止外部链接github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
+![Image](https://github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
 
 ''' 
 	f.write(txt)
@@ -130,7 +132,7 @@ def addZhuanlanInfo(f):
 def addBlogInfo(f):  
 	http = urllib3.PoolManager(num_pools=5, headers = headers)
 	resp = http.request('GET', blogUrl)
-	resp_tree = etree.HTML(resp.data.decode("utf-8"))
+	resp_tree = etree.HTML(resp.data.decode("gbk"))
 	# html_data = resp_tree.xpath(".//div[@class='article-item-box csdn-tracking-statistics']/h4") 
 	html_data = resp_tree.xpath(".//article[@class='blog-list-box']")
 
@@ -142,7 +144,7 @@ def addHTMLInfo(f):
 	f.write(txt)
 	f.write("\n")
 	with open('index.html', 'r+', encoding='utf-8') as file:
-			html_content = file.read()
+    		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	articles = soup.find_all('pre')
 	pre_index = 0
@@ -160,7 +162,7 @@ def addHTMLVideos(f):
 	''' 
 	f.write(txt)
 	with open('index.html', 'r+', encoding='utf-8') as file:
-			html_content = file.read()
+    		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	video_table = soup.find('table', id='tbPlayList')
 
@@ -180,7 +182,7 @@ def addHTMLBooks(f):
 '''
 	f.write(txt)
 	with open('index.html', 'r+', encoding='utf-8') as file:
-			html_content = file.read()
+    		html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	books_table1 = soup.find('div', id='bookpage1')
 	books_table2 = soup.find('div', id='bookpage2')
@@ -220,7 +222,7 @@ if __name__=='__main__':
 	addHTMLDownloads(f)
 	addProjectInfo(f)
 	addZhuanlanInfo(f)
-	f.close
+	f.close 
 	with open('README.md', "r+") as f:
 		encoded_text = html.escape(f.read())
 	with open('README.md', "w+") as f:
