@@ -10,15 +10,10 @@ from bs4 import BeautifulSoup
 import requests
 import html2text
 
-
-
-
-
 # blogUrl = 'szmj0.github.io'
 blogUrl = 'www.shenzhouzhengdao.org'
 image_directory = 'images'
 
-headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'} 
 
 def save_base64_image(base64_str, image_dir, img_index, pre_index):
     # 提取图片数据
