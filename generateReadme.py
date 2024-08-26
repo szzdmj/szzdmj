@@ -1,3 +1,4 @@
+
 import base64
 import os
 from PIL import Image
@@ -40,7 +41,7 @@ def html_to_markdown_with_images(html, image_dir, pre_index):
     h.ignore_links = False
     h.ignore_images = True
 
-    # 初始化BeautifulSoup
+    # 初始化BeautifulSouput
     soup = BeautifulSoup(html, 'lxml')
     markdown_lines = []
     
@@ -88,7 +89,7 @@ def html_to_markdown_with_images(html, image_dir, pre_index):
 def addIntro(f):
 	txt = '''  
 ![Image](https://github.com/szmj0/update/blob/main/extras/Icon-256.jpg)
-# 神州明见畅游真相精简阅读版 	
+# 神州明见畅游真相精简阅读版
 ---
 简介文字
 ![Image](https://github.com/szmj0/update/blob/main/extras/sjmj-fg.jpg)
@@ -98,10 +99,9 @@ def addIntro(f):
 
 def addProjectInfo(f):
 	txt ='''
-# 翻墙项目  
-- [app](https://github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9
-- [SZMJ WEB](https://github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
-[查看更多](https://github.com/szmj0/Publish)	 
+# 开源项目  
+- [app](github.com/szmj0/update/blob/main/extras/szmj-v6.9.2024010901.apk)神州明见6.9	
+[查看更多](github.com/szmj0/Publish)	 
 
 	''' 
 	f.write(txt) 
@@ -109,9 +109,9 @@ def addProjectInfo(f):
 def addZhuanlanInfo(f):
 	txt ='''
 # 专栏  
-- [动态网](https://j.mp/ddw2288)
-- 
-
+- [SZMJ WEB](github.com/szmj0/update/blob/main/extras/SZZD_PC/szmjweb.3.0.zip)
+- [list2.txt](szzdmj.github.io/github-page-test/list2.txt)
+- [dtw](j.mp/ddw2288)
 - ……
 
 	''' 
@@ -132,7 +132,7 @@ def addZhuanlanInfo(f):
 def addBlogInfo(f):  
 	http = urllib3.PoolManager(num_pools=5, headers = headers)
 	resp = http.request('GET', blogUrl)
-	resp_tree = etree.HTML(resp.data.decode("gbk"))
+	resp_tree = etree.HTML(resp.data.decode("utf-8"))
 	# html_data = resp_tree.xpath(".//div[@class='article-item-box csdn-tracking-statistics']/h4") 
 	html_data = resp_tree.xpath(".//article[@class='blog-list-box']")
 
@@ -144,7 +144,7 @@ def addHTMLInfo(f):
 	f.write(txt)
 	f.write("\n")
 	with open('index.html', 'r+', encoding='utf-8') as file:
-    		html_content = file.read()
+			html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	articles = soup.find_all('pre')
 	pre_index = 0
@@ -162,7 +162,7 @@ def addHTMLVideos(f):
 	''' 
 	f.write(txt)
 	with open('index.html', 'r+', encoding='utf-8') as file:
-    		html_content = file.read()
+			html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	video_table = soup.find('table', id='tbPlayList')
 
@@ -182,7 +182,7 @@ def addHTMLBooks(f):
 '''
 	f.write(txt)
 	with open('index.html', 'r+', encoding='utf-8') as file:
-    		html_content = file.read()
+			html_content = file.read()
 	soup = BeautifulSoup(html_content, 'html.parser')  # or 'lxml'
 	books_table1 = soup.find('div', id='bookpage1')
 	books_table2 = soup.find('div', id='bookpage2')
@@ -202,6 +202,8 @@ def addHTMLDownloads(f):
 	pageMD = html_parser.handle(page.prettify())
 	f.write(pageMD)
 
+
+
 if __name__=='__main__':
 	f = open('README.md', 'w+')
 	addIntro(f)
@@ -220,8 +222,8 @@ if __name__=='__main__':
 	addHTMLDownloads(f)
 	addProjectInfo(f)
 	addZhuanlanInfo(f)
-	f.close 
-with open('README.md', "r+") as f:
+	f.close
+	with open('README.md', "r+") as f:
 		encoded_text = html.escape(f.read())
 	with open('README.md', "w+") as f:
 		f.write(encoded_text)
