@@ -2130,4 +2130,4 @@ IED的声明说：『中国政府企图以诬陷法轮功残害生命破坏家�
 	
 **list2.txt:**      
 ---
-jAmVwYlDwY3VwZhRwAfLmZk4lAl4PBlVwY1VGZfLQAl4vZ14FZ2RwY4RwZfxQAl4vZ14FZ2RwY4RwZfRwZhDGAhtwZl4FAlRQY3ZwYkDGZhDmZhDGZkjPAk4FA24FZ2RwYkjFB34vAjRwYkLGZhRQY3DGZhRGZhRwAk4PBkRQYjNGZhHGZhRwAk4PBkRQYjVwY4NwZhHGZk4FB1jPA54vZ04FZ0RwYjVwZfVQZk4FA04lAlVwYkLQY4NGZhpwZhRwAk4PBkVQY4pGZhRQBhDmZhRQYlDwZhLGZk4FZ2RwY4RwZfDGZk4FZ0VwY0ZwY0RGZ91
+ERR: Cannot connect redis，Unable to find the socket transport &quot;rediss&quot; - did you forget to enable it when you configured PHP?
