@@ -2130,4 +2130,4 @@ IED的声明说：『中国政府企图以诬陷法轮功残害生命破坏家�
 	
 **list2.txt:**      
 ---
-mpGZhVmZk4FBlRwYjVwZfxwAhHwZhRmAk4FZftwZk4PB24FZ2RwYkjPA24PZ3RwY1LGZhtGZkjlAlVwY2HwY3VwZhRwAfNQAk4FZkVwY1RGZhxGAftQZk4lAl4FZ2RwY4RwZc3
+NQAk4FZkVwY1RGZhxGAftQZk4lAl4FZ2RwY4RwZ7b
